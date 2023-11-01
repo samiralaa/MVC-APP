@@ -3,8 +3,13 @@ namespace Samir\Http;
 
 class Response
 {
-    public function send()
+   
+    public function __construct(protected string $body,protected int $status = 200)
     {
-        echo "Hello World";
+
+    }   
+     public function send()
+    {
+      echo $this->body;
     }
 }
